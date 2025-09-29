@@ -32,10 +32,11 @@ export default function ProductCard({ product }: ProductCardProps) {
             <Image
               src={product.imageUrl}
               alt={product.title}
-              width={600}
-              height={600}
+              width={300}
+              height={300}
               className="object-cover w-full aspect-square transition-all duration-500 group-hover:scale-110"
               data-ai-hint={product.imageHint}
+              priority
             />
             
             {/* Overlay con gradiente sutil */}
@@ -43,11 +44,11 @@ export default function ProductCard({ product }: ProductCardProps) {
             
             {/* Badge de categoría */}
             <Badge 
-              variant="secondary" 
-              className="absolute top-3 left-3 bg-background/90 backdrop-blur-sm text-foreground border-0 shadow-soft animate-fade-in"
-            >
-              {product.category}
-            </Badge>
+                variant="secondary" 
+                className="absolute top-3 left-3 bg-background/90 backdrop-blur-sm text-foreground border-0 shadow-soft animate-fade-in"
+              >
+                {product.category}
+              </Badge>
             
             {/* Botón de favoritos mejorado */}
             <Button
@@ -60,7 +61,7 @@ export default function ProductCard({ product }: ProductCardProps) {
               )}
               variant={isFavorite ? 'default' : 'outline'}
               onClick={handleFavoriteClick}
-              aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
+              aria-label={isFavorite ? 'Quitar de favoritos' : 'Añadir a favoritos'}
             >
               <Heart className={cn("h-4 w-4 transition-all duration-200", isFavorite && "fill-current")} />
             </Button>
@@ -75,7 +76,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                 e.stopPropagation();
                 // Aquí podrías agregar funcionalidad de vista rápida
               }}
-              aria-label="Quick view"
+              aria-label="Vista rápida"
             >
               <Eye className="h-4 w-4" />
             </Button>
@@ -100,11 +101,10 @@ export default function ProductCard({ product }: ProductCardProps) {
             {/* Barra de progreso sutil para simular disponibilidad */}
             <div className="w-full bg-muted rounded-full h-1.5">
               <div 
-                className="bg-gradient-accent h-1.5 rounded-full transition-all duration-500" 
-                style={{ width: `${Math.random() * 40 + 60}%` }}
+                className="bg-gradient-accent h-1.5 rounded-full transition-all duration-500 w-4/5" 
               />
             </div>
-            <p className="text-xs text-muted-foreground">Available</p>
+            <p className="text-xs text-muted-foreground">Disponible</p>
           </div>
         </CardContent>
       </Card>

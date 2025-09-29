@@ -8,10 +8,10 @@ import { Badge } from '@/components/ui/badge';
 import { useAppContext } from '@/contexts/app-provider';
 
 const navItems = [
-  { href: '/home', icon: Home, label: 'Home' },
-  { href: '/sell', icon: PlusSquare, label: 'Sell' },
-  { href: '/favorites', icon: Heart, label: 'Favorites' },
-  { href: '/profile', icon: User, label: 'Profile' },
+  { href: '/home', icon: Home, label: 'Inicio' },
+  { href: '/sell', icon: PlusSquare, label: 'Vender' },
+  { href: '/favorites', icon: Heart, label: 'Favoritos' },
+  { href: '/profile', icon: User, label: 'Perfil' },
 ];
 
 export default function BottomNav() {

@@ -53,7 +53,7 @@ export default function HomePage() {
 
   return (
     <AppShell>
-      <PageHeader title="MarketShuffle" />
+      <PageHeader title="Navem Market" />
       
       <div className="p-4 space-y-6">
         {/* Componente de búsqueda y filtros */}

@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/theme-toggle';
+import Logo from '@/components/logo';
 
 interface PageHeaderProps {
   title: string;
@@ -20,10 +21,14 @@ export default function PageHeader({ title, showBack = false, showThemeToggle = 
         {showBack && (
           <Button variant="ghost" size="icon" className="mr-2 hover-lift" onClick={() => router.back()}>
             <ArrowLeft className="h-5 w-5" />
-            <span className="sr-only">Back</span>
+            <span className="sr-only">Atrás</span>
           </Button>
         )}
-        <h1 className="text-lg font-bold font-headline truncate">{title}</h1>
+        {title === 'Navem Market' ? (
+          <Logo size="medium" />
+        ) : (
+          <h1 className="text-lg font-bold font-headline truncate">{title}</h1>
+        )}
       </div>
       
       {showThemeToggle && (

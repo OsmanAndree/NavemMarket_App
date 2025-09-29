@@ -46,25 +46,25 @@ export default function LoginPage() {
             <ShoppingBag className="h-10 w-10 text-primary animate-bounce-subtle" />
           </div>
           <CardTitle className="text-2xl font-headline bg-gradient-primary bg-clip-text text-transparent">
-            Welcome to MarketShuffle
+            Bienvenido a Navem Market
           </CardTitle>
-          <CardDescription>Log in to start buying and selling</CardDescription>
+          <CardDescription>Inicia sesión para comprar y vender</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email">Correo electrónico</Label>
               <Input 
                 id="email" 
                 type="email" 
-                placeholder="you@example.com" 
+                placeholder="tu@ejemplo.com" 
                 defaultValue="test@example.com" 
                 required 
                 className="bg-gradient-surface border-0 shadow-soft focus:shadow-medium transition-all duration-200"
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="password">Password</Label>
+              <Label htmlFor="password">Contraseña</Label>
               <Input 
                 id="password" 
                 type="password" 
@@ -77,15 +77,15 @@ export default function LoginPage() {
               type="submit" 
               className="w-full bg-gradient-primary hover:opacity-90 text-primary-foreground hover-lift"
             >
-              Log In
+              Iniciar Sesión
             </Button>
           </form>
         </CardContent>
         <CardFooter className="text-center text-sm">
           <p className="w-full">
-            Don't have an account?{' '}
+            ¿No tienes una cuenta?{' '}
             <Link href="/signup" className="font-semibold text-primary hover:underline transition-colors duration-200">
-              Sign up
+              Regístrate
             </Link>
           </p>
         </CardFooter>
