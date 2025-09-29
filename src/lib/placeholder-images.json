@@ -1,0 +1,58 @@
+{
+  "placeholderImages": [
+    {
+      "id": "1",
+      "description": "A stylish vintage leather jacket.",
+      "imageUrl": "https://images.unsplash.com/photo-1602370463198-086436840055?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxsZWF0aGVyJTIwamFja2V0fGVufDB8fHx8MTc1ODY5OTQ4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "leather jacket"
+    },
+    {
+      "id": "2",
+      "description": "A hand-painted ceramic mug with intricate designs.",
+      "imageUrl": "https://images.unsplash.com/photo-1655174570909-48d061c2e882?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjZXJhbWljJTIwbXVnfGVufDB8fHx8MTc1ODcxMDgyMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ceramic mug"
+    },
+    {
+      "id": "3",
+      "description": "A modern, minimalist bookshelf.",
+      "imageUrl": "https://images.unsplash.com/photo-1636250301575-6260b0484995?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBib29rc2hlbGZ8ZW58MHx8fHwxNzU4NzI3MDQ2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern bookshelf"
+    },
+    {
+      "id": "4",
+      "description": "A retro Polaroid camera in vibrant colors.",
+      "imageUrl": "https://images.unsplash.com/photo-1706010536462-afc70072b915?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxyZXRybyUyMGNhbWVyYXxlbnwwfHx8fDE3NTg3MjcwNDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "retro camera"
+    },
+    {
+      "id": "5",
+      "description": "An artisan scented candle in a glass jar.",
+      "imageUrl": "https://images.unsplash.com/photo-1572726729207-a78d6feb18d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzY2VudGVkJTIwY2FuZGxlfGVufDB8fHx8MTc1ODcyNzA0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "scented candle"
+    },
+    {
+      "id": "6",
+      "description": "Sleek, black wireless over-ear headphones.",
+      "imageUrl": "https://images.unsplash.com/photo-1612465289702-7c84b5258fde?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3aXJlbGVzcyUyMGhlYWRwaG9uZXN8ZW58MHx8fHwxNzU4NzA5MjMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wireless headphones"
+    },
+    {
+      "id": "seller1",
+      "description": "Seller avatar",
+      "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTg2OTE2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "seller2",
+      "description": "Seller avatar",
+      "imageUrl": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc1ODY0MDczOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "user_avatar",
+      "description": "User avatar",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTg3MDg5NTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    }
+  ]
+}
