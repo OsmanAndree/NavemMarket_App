@@ -59,7 +59,7 @@ export default function ChatPage() {
         </div>
         <div className="p-4 bg-background border-t">
           <div className="relative">
-            <Input placeholder="Type a message..." className="pr-12 h-11" />
+            <Input placeholder="Escribe un mensaje..." className="pr-12 h-11" />
             <Button size="icon" className="absolute right-1.5 top-1/2 -translate-y-1/2 h-8 w-8 bg-accent hover:bg-accent/90">
               <Send className="h-4 w-4" />
             </Button>

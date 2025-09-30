@@ -16,7 +16,7 @@ export default function FavoritesPage() {
 
   return (
     <AppShell>
-      <PageHeader title="Favorites" />
+      <PageHeader title="Favoritos" />
       <div className="p-4">
         {favoriteProducts.length > 0 ? (
           <div className="grid grid-cols-2 gap-4">
@@ -33,9 +33,9 @@ export default function FavoritesPage() {
         ) : (
           <EmptyState
             icon={Heart}
-            title="No Favorites Yet"
-            description="Tap the heart icon on products you love to save them here for easy access."
-            actionLabel="Browse Products"
+            title="No hay favoritos aún"
+            description="Haz clic en el icono de corazón en los productos que te gusten para guardarlos aquí para un acceso fácil."
+            actionLabel="Navegar productos"
             onAction={() => router.push('/home')}
           />
         )}

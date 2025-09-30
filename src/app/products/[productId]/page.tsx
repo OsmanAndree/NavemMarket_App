@@ -25,7 +25,7 @@ export default function ProductDetailPage() {
   if (!product) {
     return (
       <AppShell>
-        <PageHeader title="Loading..." showBack />
+        <PageHeader title="Cargando..." showBack />
          <div className="p-4 space-y-4">
             <Skeleton className="w-full h-80 rounded-lg" />
             <Skeleton className="h-8 w-3/4" />
@@ -66,7 +66,7 @@ export default function ProductDetailPage() {
                     size="icon" 
                     className="h-12 w-12"
                     onClick={() => toggleFavorite(product.id)}
-                    aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
+                    aria-label={isFavorite ? 'Remover de favoritos' : 'Agregar a favoritos'}
                 >
                     <Heart className={cn("h-7 w-7", isFavorite ? "text-accent fill-current" : "text-muted-foreground")} />
                 </Button>
@@ -81,20 +81,20 @@ export default function ProductDetailPage() {
                 </Avatar>
                 <div>
                     <p className="font-semibold">{product.seller.name}</p>
-                    <p className="text-sm text-muted-foreground">Seller</p>
+                    <p className="text-sm text-muted-foreground">Vendedor</p>
                 </div>
             </div>
 
             <Separator />
 
             <div>
-                <h2 className="font-semibold text-lg mb-2">Description</h2>
+                <h2 className="font-semibold text-lg mb-2">Descripción</h2>
                 <p className="text-muted-foreground whitespace-pre-wrap">{product.description}</p>
             </div>
 
             <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground" onClick={() => router.push('/chat')}>
                 <MessageSquare className="mr-2 h-5 w-5" />
-                Contact Seller
+                Contactar vendedor
             </Button>
         </div>
       </div>

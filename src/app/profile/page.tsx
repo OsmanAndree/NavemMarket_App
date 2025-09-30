@@ -14,22 +14,22 @@ export default function ProfilePage() {
   const { logout } = useAppContext();
 
   const menuItems = [
-    "Edit Profile",
-    "My Listings",
-    "Purchase History",
-    "Settings",
-    "Help & Support"
+    "Editar perfil",
+    "Mis listados",
+    "Historial de compras",
+    "Configuración",
+    "Ayuda y soporte"
   ];
 
   return (
     <AppShell>
-      <PageHeader title="Profile" />
+      <PageHeader title="Perfil" />
       <div className="p-4 flex flex-col items-center">
         <Avatar className="h-24 w-24 mt-4 mb-2 border-4 border-primary/50">
           <AvatarImage src="https://picsum.photos/seed/user_avatar/100/100" alt="User Name" />
           <AvatarFallback>U</AvatarFallback>
         </Avatar>
-        <h1 className="text-2xl font-bold font-headline">Current User</h1>
+        <h1 className="text-2xl font-bold font-headline">Usuario actual</h1>
         <p className="text-muted-foreground">test@example.com</p>
       </div>
       
@@ -51,7 +51,7 @@ export default function ProfilePage() {
       <div className="mt-auto p-4">
         <Button variant="destructive" className="w-full" onClick={logout}>
           <LogOut className="mr-2 h-4 w-4" />
-          Log Out
+          Cerrar sesión
         </Button>
       </div>
     </AppShell>

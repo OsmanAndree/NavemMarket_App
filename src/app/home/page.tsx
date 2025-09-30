@@ -79,12 +79,12 @@ export default function HomePage() {
         ) : (
           <EmptyState
             icon={Package}
-            title="No products found"
+            title="No se encontraron productos"
             description={searchQuery 
-              ? "Try adjusting your search or filters to find what you're looking for."
-              : "No products are available at the moment. Check back later!"
+              ? "Intenta ajustar tu búsqueda o filtros para encontrar lo que buscas."
+              : "No hay productos disponibles en este momento. Intenta más tarde!"
             }
-            actionLabel={searchQuery ? "Clear search" : undefined}
+            actionLabel={searchQuery ? "Limpiar búsqueda" : undefined}
             onAction={searchQuery ? () => handleSearch('') : undefined}
           />
         )}

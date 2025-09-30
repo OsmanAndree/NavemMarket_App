@@ -51,8 +51,8 @@ export default function SellPage() {
     if (!descriptionValue || !categoryValue) {
       toast({
         variant: "destructive",
-        title: "Missing Information",
-        description: "Please provide a category and a basic description first.",
+        title: "Falta información",
+        description: "Por favor, proporciona una categoría y una descripción básica primero.",
       });
       return;
     }
@@ -65,8 +65,8 @@ export default function SellPage() {
       if (result.success && result.data) {
         setValue("description", result.data.enrichedDescription, { shouldValidate: true });
         toast({
-          title: "Description Enriched!",
-          description: "Your product description has been enhanced by AI.",
+          title: "Descripción mejorada!",
+          description: "La descripción de tu producto ha sido mejorada por IA.",
         });
       } else {
         throw new Error(result.error);
@@ -74,8 +74,8 @@ export default function SellPage() {
     } catch (error) {
       toast({
         variant: "destructive",
-        title: "AI Enrichment Failed",
-        description: "Could not enrich the description. Please try again.",
+        title: "Error al mejorar la descripción",
+        description: "No se pudo mejorar la descripción. Por favor, intenta nuevamente.",
       });
     } finally {
       setIsEnriching(false);
@@ -89,24 +89,24 @@ export default function SellPage() {
         imageHint: data.category.toLowerCase(),
     });
     toast({
-      title: "Product Listed!",
-      description: `${data.title} is now available on the marketplace.`,
+      title: "Producto listado!",
+      description: `${data.title} ahora está disponible en el marketplace.`,
     });
     router.push('/home');
   };
 
   return (
     <AppShell>
-      <PageHeader title="List a New Product" />
+      <PageHeader title="Listar un nuevo producto" />
       <form onSubmit={handleSubmit(onSubmit)} className="p-4 space-y-6">
         <div className="space-y-2">
-            <Label>Upload Image</Label>
+            <Label>Subir imagen</Label>
             <div className="flex items-center justify-center w-full">
                 <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed rounded-lg cursor-pointer bg-card hover:bg-secondary transition-colors">
                     <div className="flex flex-col items-center justify-center pt-5 pb-6">
                         <Upload className="w-8 h-8 mb-3 text-muted-foreground" />
-                        <p className="mb-2 text-sm text-muted-foreground"><span className="font-semibold">Click to upload</span> or drag and drop</p>
-                        <p className="text-xs text-muted-foreground">(Mock upload)</p>
+                        <p className="mb-2 text-sm text-muted-foreground"><span className="font-semibold">Haz clic para subir</span> o arrastra y suelta</p>
+                        <p className="text-xs text-muted-foreground">(Subir mock)</p>
                     </div>
                     <input id="dropzone-file" type="file" className="hidden" disabled />
                 </label>
@@ -114,21 +114,21 @@ export default function SellPage() {
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="title">Title</Label>
+          <Label htmlFor="title">Título</Label>
           <Controller name="title" control={control} render={({ field }) => <Input id="title" placeholder="e.g., Vintage Leather Jacket" {...field} />} />
           {errors.title && <p className="text-sm text-destructive">{errors.title.message}</p>}
         </div>
 
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-2">
-            <Label htmlFor="category">Category</Label>
+            <Label htmlFor="category">Categoría</Label>
             <Controller
                 name="category"
                 control={control}
                 render={({ field }) => (
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <SelectTrigger id="category">
-                        <SelectValue placeholder="Select a category" />
+                        <SelectValue placeholder="Selecciona una categoría" />
                     </SelectTrigger>
                     <SelectContent>
                         {productCategories.map(cat => <SelectItem key={cat} value={cat}>{cat}</SelectItem>)}
@@ -139,7 +139,7 @@ export default function SellPage() {
              {errors.category && <p className="text-sm text-destructive">{errors.category.message}</p>}
           </div>
           <div className="space-y-2">
-            <Label htmlFor="price">Price ($)</Label>
+            <Label htmlFor="price">Precio ($)</Label>
             <Controller name="price" control={control} render={({ field }) => <Input id="price" type="number" step="0.01" placeholder="e.g., 25.00" {...field} />} />
             {errors.price && <p className="text-sm text-destructive">{errors.price.message}</p>}
           </div>
@@ -147,21 +147,21 @@ export default function SellPage() {
         
         <div className="space-y-2">
           <div className="flex justify-between items-center">
-            <Label htmlFor="description">Description</Label>
+            <Label htmlFor="description">Descripción</Label>
             <Button type="button" variant="ghost" size="sm" onClick={handleEnrichDescription} disabled={isEnriching}>
               {isEnriching ? (
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
               ) : (
                 <Sparkles className="mr-2 h-4 w-4 text-primary" />
               )}
-              Enrich with AI
+              Mejorar con IA
             </Button>
           </div>
-          <Controller name="description" control={control} render={({ field }) => <Textarea id="description" placeholder="Describe your item in detail..." rows={6} {...field} />} />
+          <Controller name="description" control={control} render={({ field }) => <Textarea id="description" placeholder="Describe tu item en detalle..." rows={6} {...field} />} />
           {errors.description && <p className="text-sm text-destructive">{errors.description.message}</p>}
         </div>
 
-        <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">List Product</Button>
+        <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">Listar producto</Button>
       </form>
     </AppShell>
   );

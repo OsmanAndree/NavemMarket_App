@@ -27,13 +27,13 @@ export default function SignupPage() {
           <div className="flex justify-center mb-4">
             <ShoppingBag className="h-10 w-10 text-primary" />
           </div>
-          <CardTitle className="text-2xl font-headline">Create an Account</CardTitle>
-          <CardDescription>Join MarketShuffle today</CardDescription>
+          <CardTitle className="text-2xl font-headline">Crear una cuenta</CardTitle>
+          <CardDescription>Unete a Navem Market hoy mismo</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="name">Full Name</Label>
+              <Label htmlFor="name">Nombre completo</Label>
               <Input id="name" type="text" placeholder="Your Name" required />
             </div>
             <div className="space-y-2">
@@ -41,19 +41,19 @@ export default function SignupPage() {
               <Input id="email" type="email" placeholder="you@example.com" required />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="password">Password</Label>
+              <Label htmlFor="password">Contraseña</Label>
               <Input id="password" type="password" required />
             </div>
             <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-              Sign Up
+              Crear cuenta
             </Button>
           </form>
         </CardContent>
         <CardFooter className="text-center text-sm">
           <p className="w-full">
-            Already have an account?{' '}
+            Ya tienes una cuenta?{' '}
             <Link href="/" className="font-semibold text-primary hover:underline">
-              Log in
+              Iniciar sesión
             </Link>
           </p>
         </CardFooter>
